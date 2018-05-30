@@ -15,19 +15,18 @@ using System.Windows.Shapes;
 namespace WindowExplorer
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// MainScreen.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainScreen : UserControl
     {
-        MainScreen screen;
+        MainWindow main;
+        FunctionBar functionBar;
 
-        public MainWindow()
+        public MainScreen(MainWindow main)
         {
             InitializeComponent();
-
-            // screen
-            screen = new MainScreen(this);
-            MainGrid.Children.Add(screen);
+            this.main = main;
+            functionBar = new FunctionBar(main, this);
         }
     }
 }
