@@ -14,6 +14,6 @@
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
         <Label Name="count" Content="34개 항목" Grid.Column="1" HorizontalContentAlignment="Left"/>
-        <Button Name="setting" Content="p" Grid.Column="2" BorderThickness="0"/>
+        <Button Name="mode_button" Content="p" Grid.Column="2" BorderThickness="0"/>
     </Grid>
 </UserControl>

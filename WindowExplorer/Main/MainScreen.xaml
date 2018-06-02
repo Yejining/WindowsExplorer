@@ -18,7 +18,9 @@
             <ColumnDefinition Width="1.3*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Name="navigation" Grid.Row="3" Grid.Column="0" Background="DarkGray"/>
+        <ScrollViewer Grid.Row="3" Grid.Column="0"  VerticalScrollBarVisibility="Auto">
+            <StackPanel Name="navigation" Background="DarkGray"/>
+        </ScrollViewer>
         <GridSplitter Grid.Row="3" Grid.Column="0" ResizeDirection="Columns" BorderThickness="0.5" BorderBrush="Black"></GridSplitter>
     </Grid>
 </UserControl>
