@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\App.xaml
-3-1420807934
+71991718767
 
-72095639743
+121899137601
 121654848548
-FunctionBar.xaml;MainScreen.xaml;MainWindow.xaml;
+Screen\AddressBar.xaml;Screen\Explorer.xaml;Screen\SettingBar.xaml;Main\MainScreen.xaml;Main\MainWindow.xaml;Screen\TaskBar.xaml;Screen\TitleBar.xaml;
 
 False
 

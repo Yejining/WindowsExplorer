@@ -12,21 +12,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindowExplorer
+namespace WindowExplorer.Screen
 {
     /// <summary>
-    /// FunctionBar.xaml에 대한 상호 작용 논리
+    /// SettingBar.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class FunctionBar : UserControl
+    public partial class SettingBar : UserControl
     {
-        MainWindow main;
-        MainScreen screen;
+        private static SettingBar setting;
 
-        public FunctionBar(MainWindow main, MainScreen screen)
+        public static SettingBar GetInstance()
+        {
+            if (setting == null) setting = new SettingBar();
+            return setting;
+        }
+
+        public SettingBar()
         {
             InitializeComponent();
-            this.main = main;
-            this.screen = screen;
         }
     }
 }

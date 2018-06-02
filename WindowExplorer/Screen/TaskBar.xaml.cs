@@ -12,22 +12,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindowExplorer
+namespace WindowExplorer.Screen
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// TaskBar.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TaskBar : UserControl
     {
-        MainScreen screen;
+        private static TaskBar task;
 
-        public MainWindow()
+        public static TaskBar GetInstance()
+        {
+            if (task == null) task = new TaskBar();
+            return task;
+        }
+
+        public TaskBar()
         {
             InitializeComponent();
-
-            // screen
-            screen = new MainScreen(this);
-            MainGrid.Children.Add(screen);
         }
     }
 }

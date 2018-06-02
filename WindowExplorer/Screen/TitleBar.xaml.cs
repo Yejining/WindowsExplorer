@@ -12,21 +12,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WindowExplorer
+namespace WindowExplorer.Screen
 {
     /// <summary>
-    /// MainScreen.xaml에 대한 상호 작용 논리
+    /// TitleBar.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainScreen : UserControl
+    public partial class TitleBar : UserControl
     {
-        MainWindow main;
-        FunctionBar functionBar;
+        private static TitleBar title;
 
-        public MainScreen(MainWindow main)
+        public static TitleBar GetInstance()
+        {
+            if (title == null) title = new TitleBar();
+            return title;
+        }
+
+        public TitleBar()
         {
             InitializeComponent();
-            this.main = main;
-            functionBar = new FunctionBar(main, this);
         }
     }
 }
