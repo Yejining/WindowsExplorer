@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WindowExplorer.Function;
+
 namespace WindowExplorer.Main
 {
     /// <summary>
@@ -20,6 +22,7 @@ namespace WindowExplorer.Main
     public partial class MainWindow : Window
     {
         MainScreen screen;
+        DirectoryInformation directoryManager;
 
         public MainWindow()
         {
@@ -28,6 +31,10 @@ namespace WindowExplorer.Main
             // screen
             screen = new MainScreen(this);
             MainGrid.Children.Add(screen);
+
+            // directory information class for explorer
+            directoryManager = new DirectoryInformation(screen);
+            directoryManager.SetButtonToExplorer("C:\\");
         }
     }
 }

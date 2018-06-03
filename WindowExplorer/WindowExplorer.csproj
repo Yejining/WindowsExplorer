@@ -56,11 +56,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Function\HeaderToImageConverter.cs" />
+    <Compile Include="Function\DirectoryInformation.cs" />
     <Compile Include="Function\NavigationPane.cs" />
+    <Compile Include="Function\SubFileFolderVO.cs" />
     <Compile Include="GUI\ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GUI\GettimgFolderIcon.cs" />
     <Compile Include="GUI\ImageButton.cs" />
     <Compile Include="Screen\AddressBar.xaml.cs">
       <DependentUpon>AddressBar.xaml</DependentUpon>

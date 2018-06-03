@@ -40,6 +40,11 @@
                 </TreeView>
             </StackPanel>
         </ScrollViewer>
+        <ScrollViewer Grid.Row="3" Grid.Column="1"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <StackPanel Name="Explorer">
+                
+            </StackPanel>
+        </ScrollViewer>
         <GridSplitter Grid.Row="3" Grid.Column="0" ResizeDirection="Columns" BorderThickness="0.5" BorderBrush="Black"></GridSplitter>
     </Grid>
 </UserControl>

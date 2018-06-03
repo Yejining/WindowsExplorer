@@ -81,8 +81,14 @@ namespace WindowExplorer.GUI
             this.elementHost1.Size = new System.Drawing.Size(200, 100);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
+            this.elementHost1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.elementHost1_ChildChanged);
             this.elementHost1.Child = this.explorer1;
             this.ResumeLayout(false);
+
+        }
+
+        private void elementHost1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
 
         }
     }

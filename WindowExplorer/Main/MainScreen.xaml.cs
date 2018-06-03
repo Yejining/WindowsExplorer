@@ -55,5 +55,10 @@ namespace WindowExplorer.Main
             NavigationPane navigation = new NavigationPane(this);
             navigation.NavigationPane_Loaded(sender, e);
         }
+
+        public double ExplorerWidth()
+        {
+            return ScreenGrid.ColumnDefinitions[1].Width.Value;
+        }
     }
 }

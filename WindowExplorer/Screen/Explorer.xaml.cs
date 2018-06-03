@@ -11,16 +11,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace WindowExplorer.Screen
 {
     /// <summary>
     /// Explorer.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Explorer : UserControl
+    public partial class Explorer : System.Windows.Controls.UserControl
     {
         private static Explorer explorer;
-
+        
         public static Explorer GetInstance()
         {
             if (explorer == null) explorer = new Explorer();
