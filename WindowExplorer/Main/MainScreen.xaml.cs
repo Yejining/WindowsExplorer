@@ -10,9 +10,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.IO;
+using System.Text.RegularExpressions;
 
 using WindowExplorer.Screen;
+using WindowExplorer.Function;
 
 namespace WindowExplorer.Main
 {
@@ -23,6 +25,7 @@ namespace WindowExplorer.Main
     {
         MainWindow main;
         ScreenShare screen = new ScreenShare();
+        NavigationPane navigation;
 
         public MainScreen(MainWindow main)
         {
@@ -46,6 +49,12 @@ namespace WindowExplorer.Main
             Grid.SetRow(grid, row);
             Grid.SetColumn(grid, column);
             Grid.SetColumnSpan(grid, span);
+        }
+
+        public void NavigationPane_Loaded(object sender, RoutedEventArgs e)
+        {
+            NavigationPane navigation = new NavigationPane(this);
+            navigation.NavigationPane_Loaded(sender, e);
         }
     }
 }

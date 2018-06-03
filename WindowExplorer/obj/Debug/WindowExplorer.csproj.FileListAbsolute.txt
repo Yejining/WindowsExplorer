@@ -24,3 +24,4 @@ C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Debug\Main\Mai
 C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Debug\Main\MainWindow.baml
 C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Debug\Screen\TaskBar.baml
 C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Debug\Screen\TitleBar.baml
+C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Debug\WindowExplorer.GUI.ButtonStyle.resources
