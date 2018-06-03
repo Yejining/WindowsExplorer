@@ -25,7 +25,6 @@ namespace WindowExplorer.Main
     {
         MainWindow main;
         ScreenShare screen = new ScreenShare();
-        NavigationPane navigation;
 
         public MainScreen(MainWindow main)
         {

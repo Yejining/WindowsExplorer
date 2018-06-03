@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using WindowExplorer.Main;
 
 namespace WindowExplorer.Function
@@ -19,16 +20,64 @@ namespace WindowExplorer.Function
             this.screen = screen;
         }
 
+        //TreeViewItem item = new TreeViewItem();
+        //item.Uid = uid;
+        //item.IsExpanded = false;
+
+        //// create stack panel
+        //StackPanel stack = new StackPanel();
+        //stack.Orientation = Orientation.Horizontal;
+
+        //// create Image
+        //Image image = new Image();
+        //image.Source = new BitmapImage
+        //    (new Uri("pack://application:,,/Images/" + imagePath));
+        //image.Width = 16;
+        //image.Height = 16;
+        //// Label
+        //Label lbl = new Label();
+        //lbl.Content = text;
+
+
+        //// Add into stack
+        //stack.Children.Add(image);
+        //stack.Children.Add(lbl);
+
+        //// assign stack to header
+        //item.Header = stack;
+        //return item;
+
         public void NavigationPane_Loaded(object sender, RoutedEventArgs e)
         {
             foreach (string drive in Directory.GetLogicalDrives())
             {
+                // create stack panel
+                StackPanel stack = new StackPanel();
+                stack.Orientation = Orientation.Horizontal;
+
+                // create Image
+                Image image = new Image();
+                image.Source = new BitmapImage(new Uri(@"\Images\aaa.png", UriKind.Relative));
+                image.Width = 16;
+                image.Height = 16;
+
+                // Add into stack
+                stack.Children.Add(image);
+
+                //// assign stack to header
+                //item.Header = stack;
+                //return item;
+
+                ImageBrush brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(@"\Images\aaa.png", UriKind.Relative));
+
+
                 TreeViewItem item = new TreeViewItem()
                 {
-                    Header = drive,
+                    Header = $"로컬 디스크 ({drive.TrimEnd('\\')})",
                     Tag = drive
                 };
-
+                
                 item.Items.Add(null);
                 item.Expanded += FolderExpanded;
                 screen.FolderView.Items.Add(item);

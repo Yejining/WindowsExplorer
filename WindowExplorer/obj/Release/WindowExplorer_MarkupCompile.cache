@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Debug\
+C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\obj\Release\
 WindowExplorer
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\App.xaml
 71991718767
 
@@ -16,5 +16,5 @@ C:\Users\User\Documents\GitHub\WindowsExplorer\WindowExplorer\App.xaml
 162130521089
 Screen\AddressBar.xaml;Screen\Explorer.xaml;Screen\SettingBar.xaml;Main\MainScreen.xaml;Main\MainWindow.xaml;Screen\TaskBar.xaml;Screen\TitleBar.xaml;
 
-False
+True
 

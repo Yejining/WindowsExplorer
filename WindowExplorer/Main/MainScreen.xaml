@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WindowExplorer.Main"
+             xmlns:localB="clr-namespace:WindowExplorer.Function"
              mc:Ignorable="d" 
              Loaded="NavigationPane_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
@@ -28,7 +29,7 @@
                                 <Setter.Value>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Width="20" Margin="3" Source="../Images/ico166.ico"/>
+                                            <Image Width="16" Height="16" Margin="3"/>
                                             <TextBlock VerticalAlignment="Center" Text="{Binding}"/>
                                         </StackPanel>
                                     </DataTemplate>
