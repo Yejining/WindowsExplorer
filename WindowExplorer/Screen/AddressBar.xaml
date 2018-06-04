@@ -23,7 +23,7 @@
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="3"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="25"/>
             <ColumnDefinition Width="8"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="10"/>

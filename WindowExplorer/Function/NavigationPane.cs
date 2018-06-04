@@ -56,6 +56,7 @@ namespace WindowExplorer.Function
                 
                 item.Items.Add(null);
                 item.Expanded += FolderExpanded;
+                
                 screen.FolderView.Items.Add(item);
             }
         }
@@ -67,7 +68,7 @@ namespace WindowExplorer.Function
             // item이 dummy data를 가지고 있을 경우
             if (item.Items.Count != 1 || item.Items[0] != null)
                 return;
-
+            
             // Clear dummy data
             item.Items.Clear();
 
@@ -101,8 +102,9 @@ namespace WindowExplorer.Function
                 {
                     subItem.Items.Add(null);
                     subItem.Expanded += FolderExpanded;
-                    subItem.MouseLeftButtonUp += (object sndr, MouseButtonEventArgs m_args) => ChangeDirectory(sndr, m_args, (string)subItem.Tag);
                 }
+
+                subItem.MouseLeftButtonUp += (object sndr, MouseButtonEventArgs m_args) => ChangeDirectory(sndr, m_args, (string)subItem.Tag);
 
                 item.Items.Add(subItem);
             });

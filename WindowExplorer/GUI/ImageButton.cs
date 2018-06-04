@@ -53,11 +53,14 @@ namespace WindowExplorer.GUI
 
         private System.Windows.Controls.Image GetImageFromIcon(Icon icon)
         {
-            ImageSource imageSource = Imaging.CreateBitmapSourceFromHIcon( icon.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            ImageSource imageSource = Imaging.CreateBitmapSourceFromHIcon(icon.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
             System.Windows.Controls.Image convertedImage = new System.Windows.Controls.Image();
             convertedImage.Source= imageSource;
             convertedImage.Height = 90;
             convertedImage.Width = 70;
+
+            if (subEntry.IsHidden)
+                convertedImage.Opacity = 0.5;
 
             return convertedImage;
         }

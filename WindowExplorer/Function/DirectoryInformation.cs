@@ -54,7 +54,10 @@ namespace WindowExplorer.Function
                 if ((directory.Attributes & FileAttributes.System) != FileAttributes.System)
                 {
                     icon = GUI.GettimgFolderIcon.GetIcon(directory.Name, content);
-                    subFolderList.Add(new SubFileFolderVO { Name = directory.Name, SubIcon = icon, Path = content });
+                    if ((directory.Attributes & FileAttributes.Hidden) == FileAttributes.Hidden)
+                        subFolderList.Add(new SubFileFolderVO { Name = directory.Name, SubIcon = icon, Path = content, IsHidden = true });
+                    else
+                        subFolderList.Add(new SubFileFolderVO { Name = directory.Name, SubIcon = icon, Path = content, IsHidden = false });
                 }
             }
             IOrderedEnumerable<SubFileFolderVO> orderedFolder = subFolderList.OrderBy(x => x.Name);
@@ -67,7 +70,12 @@ namespace WindowExplorer.Function
                 file = new FileInfo(content);
                 Icon icon = Icon.ExtractAssociatedIcon(content);
                 if ((file.Attributes & FileAttributes.System) != FileAttributes.System)
-                    subFileList.Add(new SubFileFolderVO { Name = file.Name, SubIcon = icon, Path = content });
+                {
+                    if ((file.Attributes & FileAttributes.Hidden) == FileAttributes.Hidden)
+                        subFolderList.Add(new SubFileFolderVO { Name = file.Name, SubIcon = icon, Path = content, IsHidden = true });
+                    else
+                        subFolderList.Add(new SubFileFolderVO { Name = file.Name, SubIcon = icon, Path = content, IsHidden = false });
+                }
             }
             IOrderedEnumerable<SubFileFolderVO> orderedFile = subFileList.OrderBy(x => x.Name);
 
@@ -80,6 +88,10 @@ namespace WindowExplorer.Function
         {
             currentPath = path;
 
+            TitleBar titleBar = TitleBar.GetInstance();
+            titleBar.icon_button.Background = GettimgFolderIcon.GetSmallIcon(path);
+            titleBar.SetTitle();
+
             explorer = Explorer.GetInstance();
             taskBar = TaskBar.GetInstance();
             explorer.grid.Children.Clear();
@@ -88,6 +100,15 @@ namespace WindowExplorer.Function
             List<ImageButton> buttons = new List<ImageButton>();
 
             taskBar.SetCount($"{subEntries.Count}개 항목");
+
+            if (subEntries.Count == 0)
+            {
+                Label label = new Label();
+                label.Content = "이 폴더는 비어있습니다.";
+                label.HorizontalAlignment = HorizontalAlignment.Center;
+                explorer.grid.Children.Add(label);
+                Grid.SetColumnSpan(label, 5);
+            }
 
             int index = 0;
             foreach (SubFileFolderVO entry in subEntries)

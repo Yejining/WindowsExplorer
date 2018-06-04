@@ -11,5 +11,6 @@ namespace WindowExplorer.Function
         public string Name { get; set; }
         public Icon SubIcon { get; set; }
         public string Path { get; set; }
+        public bool IsHidden { get; set; }
     }
 }

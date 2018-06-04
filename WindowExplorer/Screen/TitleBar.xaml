@@ -16,11 +16,13 @@
             <ColumnDefinition Width="46"/>
             <ColumnDefinition Width="46"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="2" Content="|"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Grid.Column="2" Content="|"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#A4A4A4"/>
         <Label Name="folder_label" Grid.Column="3" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
-        <Button Name="icon_button" Grid.Column="1" Content="dir" BorderThickness="0"/>
-        <Button Name="minimize_button" Grid.Column="4" Content="최" BorderThickness="0"/>
-        <Button Name="size_button" Grid.Column="5" Content="크" BorderThickness="0"/>
-        <Button Name="close_button" Grid.Column="6" Content="닫" BorderThickness="0"/>
+        <Label Name="icon_button" Width="18" Height="18" Grid.Column="1" BorderThickness="0" MouseEnter="Icon_button_MouseEnter" MouseDoubleClick="Icon_button_MouseDoubleClick"/>
+        <Label Name="minimize_button" Grid.Column="4" BorderThickness="0" MouseEnter="Minimize_button_MouseEnter" MouseLeave="Minimize_button_MouseLeave" MouseDown="Minimize_button_MouseDown" MouseUp="Minimize_button_MouseUp"/>
+        
+        <Label Name="close_button"  Grid.Column="6" BorderThickness="0" MouseEnter="Close_button_MouseEnter" MouseLeave="Close_button_MouseLeave" MouseDown="Close_button_MouseDown" MouseUp="Close_button_MouseUp">
+            
+        </Label>
     </Grid>
 </UserControl>

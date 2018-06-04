@@ -53,20 +53,6 @@ namespace WindowExplorer.Function
                 logList.Insert(index + 1, path);
                 index++;
                 logList.RemoveRange(index + 1, logList.Count - index - 1);
-                // index - 1이 부모였을 경우
-                //if (logList[index - 1] == Directory.GetParent(logList[index + 1]).ToString() && logList[index - 1] == Directory.GetParent(logList[index]).ToString())
-                //{
-                //    for (int delete = index + 1; delete < logList.Count; delete++)
-                //    {
-                //        if (logList[index - 1] == Directory.GetParent(logList[delete]).ToString())
-                //            indexToDelete.Add(delete);
-                //        else
-                //            break;
-                //    }
-
-                //    for (int delete = indexToDelete.Count - 1; delete >= 0; delete--)
-                //        logList.RemoveAt(delete);
-                //}
             }
 
             if (IsRootDirectory(path))

@@ -26,6 +26,7 @@ namespace WindowExplorer.Main
         DirectoryInformation directoryManager;
         AddressBar addressBar;
         ManageLog manager;
+        TitleBar titleBar;
 
         public MainWindow()
         {
@@ -46,6 +47,10 @@ namespace WindowExplorer.Main
             // addressBar
             addressBar = AddressBar.GetInstance();
             addressBar.SetPath();
+
+            // titleBar
+            titleBar = TitleBar.GetInstance();
+            titleBar.PassMain(this);
         }
     }
 }

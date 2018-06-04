@@ -60,9 +60,6 @@
     <Compile Include="Function\ManageLog.cs" />
     <Compile Include="Function\NavigationPane.cs" />
     <Compile Include="Function\SubFileFolderVO.cs" />
-    <Compile Include="GUI\ButtonStyle.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="GUI\GettimgFolderIcon.cs" />
     <Compile Include="GUI\ImageButton.cs" />
     <Compile Include="Screen\AddressBar.xaml.cs">
@@ -135,9 +132,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="GUI\ButtonStyle.resx">
-      <DependentUpon>ButtonStyle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
