@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\WindowExplorer",
-    "\\WindowExplorer\\Main"
+    "\\WindowExplorer\\Function",
+    "\\WindowExplorer\\GUI",
+    "\\WindowExplorer\\Images",
+    "\\WindowExplorer\\Main",
+    "\\WindowExplorer\\Screen"
   ],
-  "SelectedNode": "\\WindowExplorer\\Properties",
+  "SelectedNode": "\\WindowExplorer\\GUI",
   "PreviewInSolutionExplorer": false
 }

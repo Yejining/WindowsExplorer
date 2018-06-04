@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using WindowExplorer.Function;
+using WindowExplorer.Screen;
 
 namespace WindowExplorer.Main
 {
@@ -23,6 +24,8 @@ namespace WindowExplorer.Main
     {
         MainScreen screen;
         DirectoryInformation directoryManager;
+        AddressBar addressBar;
+        ManageLog manager;
 
         public MainWindow()
         {
@@ -32,9 +35,17 @@ namespace WindowExplorer.Main
             screen = new MainScreen(this);
             MainGrid.Children.Add(screen);
 
+            // log
+            manager = ManageLog.GetInstance();
+            manager.AddLog("C:\\", 0);
+
             // directory information class for explorer
-            directoryManager = new DirectoryInformation(screen);
+            directoryManager = DirectoryInformation.GetInstance();
             directoryManager.SetButtonToExplorer("C:\\");
+
+            // addressBar
+            addressBar = AddressBar.GetInstance();
+            addressBar.SetPath();
         }
     }
 }

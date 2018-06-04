@@ -5,19 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using WindowExplorer.Main;
+
+using WindowExplorer.Screen;
 
 namespace WindowExplorer.Function
 {
     class NavigationPane
     {
         private MainScreen screen;
+        ManageLog manager;
+        DirectoryInformation directoryManager;
 
         public NavigationPane(MainScreen screen)
         {
             this.screen = screen;
+            manager = ManageLog.GetInstance();
+            directoryManager = DirectoryInformation.GetInstance();
         }
 
         public void NavigationPane_Loaded(object sender, RoutedEventArgs e)
@@ -36,11 +43,7 @@ namespace WindowExplorer.Function
 
                 // Add into stack
                 stack.Children.Add(image);
-
-                //// assign stack to header
-                //item.Header = stack;
-                //return item;
-
+                
                 ImageBrush brush = new ImageBrush();
                 brush.ImageSource = new BitmapImage(new Uri(@"\Images\aaa.png", UriKind.Relative));
 
@@ -98,10 +101,20 @@ namespace WindowExplorer.Function
                 {
                     subItem.Items.Add(null);
                     subItem.Expanded += FolderExpanded;
+                    subItem.MouseLeftButtonUp += (object sndr, MouseButtonEventArgs m_args) => ChangeDirectory(sndr, m_args, (string)subItem.Tag);
                 }
 
                 item.Items.Add(subItem);
             });
+        }
+
+        private void ChangeDirectory(object sender, MouseButtonEventArgs e, string path)
+        {
+            AddressBar address = AddressBar.GetInstance();
+
+            manager.AddLog(path, 0);
+            directoryManager.SetButtonToExplorer(path);
+            address.SetPath();
         }
 
         public bool IsHavingSubDirectory(string path)

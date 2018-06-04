@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WindowExplorer.Screen"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Name="grid" Background="AntiqueWhite">
+    <Grid Name="grid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"/>
             <ColumnDefinition Width="20"/>

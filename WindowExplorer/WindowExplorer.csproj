@@ -57,6 +57,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Function\DirectoryInformation.cs" />
+    <Compile Include="Function\ManageLog.cs" />
     <Compile Include="Function\NavigationPane.cs" />
     <Compile Include="Function\SubFileFolderVO.cs" />
     <Compile Include="GUI\ButtonStyle.cs">

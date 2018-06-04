@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WindowExplorer.Screen"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="grid" Background="Bisque">
+    <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
             <RowDefinition Height="*"/>
@@ -28,12 +28,12 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        <Button Name="back_button" Grid.Row="1" Grid.Column="1" Content="←" BorderThickness="0" Background="AntiqueWhite"/>
-        <Button Name="forward_button" Grid.Row="1" Grid.Column="3" Content="→" BorderThickness="0" Background="AntiqueWhite"/>
-        <Button Name="log_button" Grid.Row="1" Grid.Column="5" Content="^" BorderThickness="0" Background="AntiqueWhite"/>
-        <Button Name="up_button" Grid.Row="1" Grid.Column="7" Content="↑" BorderThickness="0" Background="AntiqueWhite"/>
-        <Rectangle Grid.Row="1" Grid.Column="9" Fill="AliceBlue"/>
-        <Button Name="refresh_button" Grid.Row="1" Grid.Column="10" Content="r" BorderThickness="0"/>
-        <Rectangle Grid.Row="1" Grid.Column="12" Fill="AliceBlue"/>
+        <Button Name="back_button" Grid.Row="1" Grid.Column="1" Content="←" BorderThickness="0" Background="AntiqueWhite" Click="Back_button_Click"/>
+        <Button Name="forward_button" Grid.Row="1" Grid.Column="3" Content="→" BorderThickness="0" Background="AntiqueWhite" Click="Forward_button_Click"/>
+        <Button Name="log_button" Grid.Row="1" Grid.Column="5" Content="^" BorderThickness="0" Background="AntiqueWhite" Click="log_button_Click"/>
+        <Button Name="up_button" Grid.Row="1" Grid.Column="7" Content="↑" BorderThickness="0" Background="AntiqueWhite" Click="Up_button_Click"/>
+        <TextBox Name="address_bar" Padding="5,0,0,0" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="9" BorderThickness="1" BorderBrush="#DADBDC" PreviewMouseLeftButtonUp="Address_bar_MouseLeftButtonUp" KeyDown="Address_bar_KeyDown"/>
+        <Button Name="refresh_button" Grid.Row="1" Grid.Column="10" Content="r" BorderThickness="0" Click="Refresh_button_Click"/>
+        <Label Name="search" Foreground="#DADBDC" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="12" Background="White" BorderThickness="1" BorderBrush="#DADBDC"/>
     </Grid>
 </UserControl>

@@ -31,5 +31,10 @@ namespace WindowExplorer.Screen
         {
             InitializeComponent();
         }
+
+        public void SetCount(string count)
+        {
+            this.count.Content = count;
+        }
     }
 }

@@ -67,7 +67,7 @@ namespace WindowExplorer.GUI
             TextBox box = new TextBox();
             
             box.MaxWidth = 85;
-            box.MaxHeight = 67;
+            box.MaxHeight = 70;
             box.Text = name;
 
             Typeface typeface = new Typeface(box.FontFamily, box.FontStyle, box.FontWeight, box.FontStretch);

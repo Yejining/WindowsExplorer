@@ -8,11 +8,11 @@
              mc:Ignorable="d" 
              Loaded="NavigationPane_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="ScreenGrid" Background="AliceBlue">
+    <Grid x:Name="ScreenGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="33"/>
+            <RowDefinition Height="37"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
@@ -45,6 +45,6 @@
                 
             </StackPanel>
         </ScrollViewer>
-        <GridSplitter Grid.Row="3" Grid.Column="0" ResizeDirection="Columns" BorderThickness="0.5" BorderBrush="Black"></GridSplitter>
+        <GridSplitter Grid.Row="3" Grid.Column="0" ResizeDirection="Columns" BorderThickness="0.7" BorderBrush="#F7F7F7"></GridSplitter>
     </Grid>
 </UserControl>

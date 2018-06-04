@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WindowExplorer.Screen"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="grid" Background="Beige">
+    <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="3"/>
@@ -24,6 +24,6 @@
         <Button Name="share_button" Grid.Row="0" Grid.Column="2" Content="공유" BorderThickness="0"/>
         <Button Name="view_button" Grid.Row="0" Grid.Column="3" Content="보기" BorderThickness="0"/>
         <Button Name="help_button" Grid.Row="0" Grid.Column="5" Content="?" BorderThickness="0"/>
-        <Border Grid.ColumnSpan="6" Grid.Row="1" BorderBrush="Black" BorderThickness="0 0 0 1"/>
+        <Border Grid.ColumnSpan="6" Grid.Row="1" BorderBrush="#DADBDC" BorderThickness="0 0 0 1"/>
     </Grid>
 </UserControl>
